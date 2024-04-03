@@ -24,7 +24,7 @@ Write an efficient algorithm for the following assumptions:
 
 N is an integer within the range [1..2,147,483,647].
 '''
-
+import unittest
 import numpy as np
 
 def solution_numpy(N):
@@ -69,6 +69,30 @@ def solution(N):
     return(max(len_gaps))
 
 
+class TestSkeleton(unittest.TestCase):
+    
+    def test_negative(self):
+        self.assertEqual(solution(-1), 0)
+
+    def test_extreme_small(self):
+        self.assertEqual(solution(0), 0)
+        self.assertEqual(solution(1), 0)
+        self.assertEqual(solution(5), 1)  
+
+        
+    def test_longest_binary_gap(self):
+        self.assertEqual(solution(1041), 5)
+        self.assertEqual(solution(42),1)
+        self.assertEqual(solution(20), 1)
+        self.assertEqual(solution(19), 2)
+                                             
+    def test_no_binary_gap(self):
+        self.assertEqual(solution(32), 0)
+
+                  
+    def test_extreme_large_binary_gap(self):
+        self.assertEqual(solution(2147483647), 0)
+        self.assertEqual(solution(3908253), 3)
+
 if __name__ == '__main__':
-    solution(1041)
-    solution_numpy(1041)
+    unittest.main()

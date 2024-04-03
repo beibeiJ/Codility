@@ -37,6 +37,7 @@ In your solution, focus on correctness. The performance of your solution will no
 
 '''
 import unittest
+
 def solution(A, K):
     # if list is empty or with only one element, return original list
     lenA = len(A)
@@ -44,7 +45,7 @@ def solution(A, K):
         return(A)
     
     # if the rotation time is multiple times of the list length, return original list
-    # if the rotation time is larger thand the list length, only rotate the necessary time
+    # if the rotation time is larger than the list length, only rotate the necessary time
     _, remainder = divmod(K, lenA)
     if remainder == 0:
         return(A)

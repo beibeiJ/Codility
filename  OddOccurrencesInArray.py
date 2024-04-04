@@ -56,10 +56,10 @@ class TestSkeleton(unittest.TestCase):
     def test_standard(self):
         self.assertEqual(solution([9, 3, 9, 3, 9, 7, 9]), 7)
 
-    def test_standard(self):
+    def test_optional(self):
         self.assertEqual(solution_optional([9, 3, 9, 3, 9, 7, 9]), 7)
 
-    def test_standard(self):
+    def test_original(self):
         self.assertEqual(solution_original([9, 3, 9, 3, 9, 7, 9]), 7)
         
 

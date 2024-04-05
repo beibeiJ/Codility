@@ -27,6 +27,7 @@ Write an efficient algorithm for the following assumptions:
 '''
 import unittest
 
+# complexity: O(N) or O(N * log(N)) 
 def solution(A):
     # sum of arithmetic sequence
     # if there is one element missing, simply considering the length of complete array should be length of A plus 1
